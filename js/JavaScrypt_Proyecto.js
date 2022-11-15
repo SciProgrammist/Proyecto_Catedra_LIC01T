@@ -2,186 +2,66 @@
 Se han usado algunos recursos externos para este mapa:
 1. Leaflet, una librería de Javasscript que permite crear mapas interactivos (https://leafletjs.com/).
 2. OpenStreetMap, como proveedor del mapa (https://www.openstreetmap.org/#map=9/13.7754/-88.8354)
- */
+*/
+
+let miMapa;
+let auchapanJ, sonsonateJ, santaAnaJ, chalatetangoJ, lalibertadJ, sansalvadorJ, cuscatlanJ, lapazJ, sanvicenteJ, cabañasJ, sanmiguelJ, usulutanJ, morazanJ, launionJ;
 
 let crearMapa = () => {
     // Se establece la latitud, longitud y nivel de zoom, respectivamente. El objeto miMapa será la base de todo
-    let miMapa = L.map('div_mapa').setView([13.7781, -88.8272], 9);
+    miMapa = L.map('div_mapa').setView([13.7994, -88.8272], 9);
 
     // Se agrega el mapa usando OpenStreetMap como proveedor.
-    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(miMapa);
 
-    // Se delimita el departamento, y se añade al mapa
-    let ahuachapan = delAhuachapan();
-    ahuachapan.addTo(miMapa);
-    // Pop-up de Ahuachapan
-    ahuachapan.bindPopup(infoAhuachapan());
-
-    let sonsonate = delSonsonate();
-    sonsonate.addTo(miMapa);
-    sonsonate.bindPopup(infoSonsonate());
-
-    let santaAna = delSantaAna();
-    santaAna.addTo(miMapa);
-    santaAna.bindPopup(infoSantaAna());
+    delimitarDepartamentos(); // Se delimitan los departamentos.
 }
 
-// La información previa de cada departamento
-let infoAhuachapan = () => {
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
+let delimitarDepartamentos = () => {
+    infoPrevia(); // Se establece la información previa
+
+    let ahuachapanP = delAhuachapan();
+    ahuachapanP.addTo(miMapa);
+
+    let sonsonateP = delSonsonate();
+    sonsonateP.addTo(miMapa);
+
+    let santaAnaP = delSantaAna();
+    santaAnaP.addTo(miMapa);
+
+    let lalibertadP = delLaLibertad();
+    lalibertadP.addTo(miMapa);
+
+    let sansalvadorP = delSanSalvador();
+    sansalvadorP.addTo(miMapa);
+
+    sansalvadorP.bindPopup(JSON.parse(sansalvadorJ).html);
 }
 
-let infoSonsonate = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
+let infoPrevia = () => {
+    let obj1 = new departamento('San Salvador', 'San Salvador', 'Solo_Numero', 'El 6 y 7 de agosto', 'Solo_Numero');
+    sansalvadorJ = JSON.stringify(obj1);
 }
 
-let infoSantaAna = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
+// La información previa de cada departamento se guardará en una clase
+let departamento = function (dep, cabecera, extension, fiestas, habitantes) {
+    this.nombre = dep;
+    this.cabecera = cabecera;
+    this.extensionT = extension;
+    this.fiestasP = fiestas;
+    this.cantidadH = habitantes;
 
-let infoChalatenango = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
+    this.html = `<h5>${this.nombre}</h5>
+        <ul>
+        <li><b>Cabecera</b>: ${cabecera}</li> 
+        <li><b>Extensión territorial</b>: ${this.extensionT}km<sup>2</sup></li> 
+        <li><b>Fiestas patronales</b>: ${this.fiestasP}</li> 
+        <li><b>Cant. de habitantes</b>: ${this.cantidadH} personas</li> 
+        </ul>`;
 
-let infoLaLibertad = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoSanSalvador = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoCuscatlan = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoLaPaz = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoCabañas = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoSanVicente = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoUsulutan = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoSanMiguel = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoMorazan = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoLaUnion = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
 }
 
 // Delimita las coordenadas del departamento
@@ -335,9 +215,10 @@ let delSonsonate = () => {
 
 
 
-let delSantaAna = () =>{
+let delSantaAna = () => {
 
     let poligono = L.polygon([
+        [13.7787, -89.4651],
         [13.7786, -89.4694], // Sonsonate - La Libertad
         [13.7842, -89.4788],
         [13.7881, -89.4745],
@@ -453,6 +334,190 @@ let delSantaAna = () =>{
         [13.8134, -89.4538],
         [13.8134, -89.4538]
 
+    ]);
+
+    return poligono;
+}
+
+let delLaLibertad = () => {
+    let poligono = L.polygon([
+        [14.027, -89.3837], // SA-Chalate-LA
+        [13.986, -89.3999],
+        [13.9546, -89.3918],
+        [13.9314, -89.426],
+        [13.9174, -89.4514],
+        [13.8921, -89.4576],
+        [13.8544, -89.45],
+        [13.8307, -89.45],
+        [13.8331, -89.4593],
+        [13.8224, -89.4562],
+        [13.8134, -89.4538],
+        [13.8134, -89.4538],
+        [13.8134, -89.4538],
+        [13.7787, -89.4651], // Sonsonate - Santa Ana- La Libertad
+        [13.7694, -89.4644],
+        [13.7654, -89.4452],
+        [13.7454, -89.4445],
+        [13.7494, -89.4775],
+        [13.7154, -89.4974],
+        [13.7044, -89.5183],
+        [13.7064, -89.5242],
+        [13.698, -89.5283],
+        [13.6713, -89.5259],
+        [13.662, -89.519],
+        [13.6597, -89.5355],
+        [13.6533, -89.5314],
+        [13.6557, -89.529],
+        [13.645, -89.5207],
+        [13.61, -89.5478],
+        [13.6143, -89.5537],
+        [13.6033, -89.5575],
+        [13.6036, -89.553],
+        [13.5986, -89.5482],
+        [13.5711, -89.5782],
+        [13.5215, -89.6296], // Sonsonate-La Libertad
+        [13.5142, -89.6087],
+        [13.4945, -89.526],
+        [13.499, -89.4759],
+        [13.4925, -89.4236],
+        [13.492, -89.3702],
+        [13.4848, -89.3544],
+        [13.4865, -89.3488],
+        [13.4806, -89.3275],
+        [13.4873, -89.3196],
+        [13.4851, -89.3118],
+        [13.4866, -89.3079],
+        [13.4509, -89.2218],
+        [13.4261, -89.1722],
+        [13.4259, -89.1672],
+        [13.4509, -89.1567],
+        [13.4584, -89.1467],
+        [13.4845, -89.1631],
+        [13.49, -89.159],
+        [13.4916, -89.1604],// La Libertad - San Salvador
+        [13.4911, -89.1716],
+        [13.4845, -89.1716],
+        [13.4761, -89.1829],
+        [13.4794, -89.2076],
+        [13.4991, -89.21],
+        [13.4995, -89.2145],
+        [13.5369, -89.2323],
+        [13.5622, -89.2217],
+        [13.5796, -89.2203],
+        [13.5893, -89.2306],
+        [13.6079, -89.2268],
+        [13.6193, -89.2275],
+        [13.6206, -89.2234],
+        [13.6275, -89.2215],
+        [13.633, -89.2234],
+        [13.634, -89.2351],
+        [13.6361, -89.2351],
+        [13.636, -89.243],
+        [13.6423, -89.2431],
+        [13.6573, -89.2382],
+        [13.6557, -89.2279],
+        [13.663, -89.2248],
+        [13.6834, -89.2323],
+        [13.6813, -89.2454],
+        [13.6909, -89.2492],
+        [13.6947, -89.255],
+        [13.7087, -89.2612],
+        [13.7107, -89.2756],
+        [13.7367, -89.2639],
+        [13.7461, -89.2646],
+        [13.7374, -89.2862],
+        [13.7374, -89.2862],
+        [13.7374, -89.2862],
+        [13.8137, -89.2639],
+        [13.8224, -89.2546],
+        [13.8484, -89.245],
+        [13.8944, -89.2354],
+        [13.9204, -89.2344],
+        [13.9191, -89.2186],
+        [13.9331, -89.2189],
+        [13.9427, -89.2241],
+        [13.9414, -89.2382],
+        [13.9541, -89.2667],
+        [13.9641, -89.257],
+        [13.9839, -89.2802],
+        [13.9779, -89.2822],
+        [14.0004, -89.291],
+        [14.026, -89.2838],
+        [14.0343, -89.2728], // Chalate- SS- LA
+        [14.0467, -89.277],
+        [14.0515, -89.2847],
+        [14.0453, -89.2886],
+        [14.0458, -89.3037],
+        [14.0572, -89.3075],
+        [14.0634, -89.3057],
+        [14.0642, -89.3200],
+        [14.0642, -89.3200],
+        [14.0508, -89.3352],
+        [14.0463, -89.347],
+        [14.0507, -89.3566],
+        [14.0453, -89.3637],
+        [14.0363, -89.3659],
+        [14.0343, -89.3678],
+        [14.0247, -89.3705],
+        [14.0264, -89.3740],
+        [14.0304, -89.3769]
+    ])
+
+    return poligono;
+}
+
+let delSanSalvador = () => {
+    let poligono = L.polygon([
+        [13.4916, -89.1604],// La Libertad - San Salvador
+        [13.4911, -89.1716],
+        [13.4845, -89.1716],
+        [13.4761, -89.1829],
+        [13.4794, -89.2076],
+        [13.4991, -89.21],
+        [13.4995, -89.2145],
+        [13.5369, -89.2323],
+        [13.5622, -89.2217],
+        [13.5796, -89.2203],
+        [13.5893, -89.2306],
+        [13.6079, -89.2268],
+        [13.6193, -89.2275],
+        [13.6206, -89.2234],
+        [13.6275, -89.2215],
+        [13.633, -89.2234],
+        [13.634, -89.2351],
+        [13.6361, -89.2351],
+        [13.636, -89.243],
+        [13.6423, -89.2431],
+        [13.6573, -89.2382],
+        [13.6557, -89.2279],
+        [13.663, -89.2248],
+        [13.6834, -89.2323],
+        [13.6813, -89.2454],
+        [13.6909, -89.2492],
+        [13.6947, -89.255],
+        [13.7087, -89.2612],
+        [13.7107, -89.2756],
+        [13.7367, -89.2639],
+        [13.7461, -89.2646],
+        [13.7374, -89.2862],
+        [13.7374, -89.2862],
+        [13.7374, -89.2862],
+        [13.8137, -89.2639],
+        [13.8224, -89.2546],
+        [13.8484, -89.245],
+        [13.8944, -89.2354],
+        [13.9204, -89.2344],
+        [13.9191, -89.2186],
+        [13.9331, -89.2189],
+        [13.9427, -89.2241],
+        [13.9414, -89.2382],
+        [13.9541, -89.2667],
+        [13.9641, -89.257],
+        [13.9839, -89.2802],
+        [13.9779, -89.2822],
+        [14.0004, -89.291],
+        [14.026, -89.2838],
+        [14.0343, -89.2728],
     ]);
 
     return poligono;

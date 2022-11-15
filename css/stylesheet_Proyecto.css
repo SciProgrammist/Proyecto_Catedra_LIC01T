@@ -42,3 +42,7 @@ body {
 footer{
     padding: 20px;
 }
+
+#div_mapa{
+    height: 500px;
+}

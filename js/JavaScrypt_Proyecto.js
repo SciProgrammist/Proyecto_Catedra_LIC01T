@@ -29,6 +29,161 @@ let crearMapa = () => {
     santaAna.bindPopup(infoSantaAna());
 }
 
+// La información previa de cada departamento
+let infoAhuachapan = () => {
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoSonsonate = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoSantaAna = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoChalatenango = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoLaLibertad = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoSanSalvador = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoCuscatlan = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoLaPaz = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoCabañas = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoSanVicente = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoUsulutan = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoSanMiguel = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoMorazan = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
+let infoLaUnion = () =>{
+    let html = `<b>Ahuachapán</b>
+    <ul>
+    <li>Cabecera: Ahuachapán</li> 
+    <li>Extensión territorial: -----</li> 
+    <li>Fiestas patronales: ----</li> 
+    <li>Cant. de habitantes: ----</li> 
+    </ul>`;
+    return html;
+}
+
 // Delimita las coordenadas del departamento
 let delAhuachapan = () => {
 
@@ -303,37 +458,5 @@ let delSantaAna = () =>{
     return poligono;
 }
 
-// La información previa de cada departamento
-let infoAhuachapan = () => {
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
 
-let infoSonsonate = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
-
-let infoSantaAna = () =>{
-    let html = `<b>Ahuachapán</b>
-    <ul>
-    <li>Cabecera: Ahuachapán</li> 
-    <li>Extensión territorial: -----</li> 
-    <li>Fiestas patronales: ----</li> 
-    <li>Cant. de habitantes: ----</li> 
-    </ul>`;
-    return html;
-}
 window.onload = crearMapa;

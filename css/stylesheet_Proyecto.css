@@ -1,4 +1,44 @@
-*
-{
-    padding: inherit;
+.navbar-brand {
+    position: relative;
+    background: url(/img/escudo.png);
+    width: 65px;
+    height: 65px;
+    background-size: contain;
+}
+
+.navbar {
+    padding: .8rem;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 2m !important;
+
+}
+
+.nav-link {
+    font-size: 1.1m !important;
+}
+
+body {
+    background-image: linear-gradient(to top, #1875ff, #b5d3ff);
+    height: 100%;
+}
+
+#div_principal {
+    border-radius: 15px;
+    align-content: center;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.img_example{
+    align-content:center;
+    height: 400px;
+    width: 625px
+}
+
+footer{
+    padding: 20px;
 }

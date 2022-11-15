@@ -2,11 +2,127 @@
 <html lang="es">
 
 <head>
-    <title>Mapa de el Salvador</title>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="departamentos, turismo, El Salvador, mapa">
+    <meta name="description" content="Un mapa interactivo de El Salvador">
+    <!--Enlace a Bootstrap-->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/stylesheet_Proyecto.css">
+    <!--Icono -->
+    <link rel="icon" href="img/escudo.png">
+    <title>Mapa Interactivo</title>
 </head>
 
 <body>
-    <h1>Pagina con el mapa dinamico de el salvador</h1>
-</body>
+    <!--Menu para seleccion de zonas-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Mapa_Index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link">Zona Occidental</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link">Zona Central</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link">Zona Oriental</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Seccion Principal-->
+    <div class="container-fluid p-5 ">
 
-</html>
+        <div class="container-md bg-light" id="div_principal">
+            <h1 class="text-center text-primary">Mapa Interactivo de El Salvador.</h1>
+            <br>
+           
+                <!--Lugar donde estara el mapa interactivo-->
+                <div id="div_mapa"><img src="img/mapaSV.jpg" class="img_example" id="banner"></div>
+                <p class="p-3 lead">
+                    <!--Corta descripcion-->
+                    <b>El Salvador</b> es un lugar lindo, lleno de
+                    <span style="color:blue">hermosos paisajes y ricas tradiciones.</span> Y uno de sus atractivos es sin lugar a dudas sus valles, montañas y cerros que en esta página se presente un mapa interactivo para que conoscoas mas sobre ellos. ¡Bienvenido!
+                </p>
+        </div>
+    </div>
+    <!--Footer-->
+   <footer>
+            <div class="container-fluid" style="font-family: Helvetica; border: 2px groove #33FFFF;
+            border-radius: 15px;">
+                <div class="row">
+                    <span class="display-4" style="font-weight: bold; color: #00FFFF;">⌨ Desarrolladores</span>
+                    <br><br>
+                    <div class="col text-light" >
+                        <p class="text-center" style="font-weight: bold;">
+                            <br>
+                            Christopher Cruz
+                        </p>
+                        <p style="text-align: justify;">
+                            Programador Junior en Javascript, CSS y HTML, me gusta leer y ver películas. Actualmente
+                            estudio en la Universidad Don Bosco.
+                        </p>
+                         <a class="text-white" target="_blank" href="https://github.com/SomeRandomCatholic">Ver perfil de
+                            Github</a>
+                    </div>
+                    <div class="col text-light">
+                        <p class="text-center" style="font-weight: bold;">
+                            <br>
+                            María Torres
+                        </p>
+                        <p style="text-align: justify;">
+                            Estudiante de ingeniería en ciencias de la computación, me gusta dibujar y ver series.
+                            Actualmente curso mi segundo año
+                            en la Universidad Don Bosco.
+                        </p>
+                         <a class="text-white" target="_blank" href="https://github.com/MariaTorres0">Ver perfil de
+                            Github</a>
+
+                    </div>
+                    <div class="col text-light">
+                        <p class="text-center" style="font-weight: bold;">
+                            <br>
+                            Daniel Reyes
+                        </p>
+                        <p style="text-align: justify;">
+                            Cientifico Programador, me encanta las matematicas y ciencias aplicadas, quiero crear
+                            soluciones y venderlas a los mejores compradores, como todo buen capitalista que vive en una
+                            economia neoliberal.
+                        </p>
+                         <a class="text-white" target="_blank" href="https://github.com/SciProgrammist">Ver perfil de
+                            Github</a>
+                    </div>
+                    <div class="col text-light">
+                        <p class="text-center" style="font-weight: bold;">
+                            <br>
+                            Antonio Caballero
+                        </p>
+                        <p style="text-align: justify;">
+                            Programador Junior en HTML, CSS y C#, me gusta todo tipo de musica, actualmente estudio en la
+                            Universidad Don Bosco.
+                        </p>
+                         <a class="text-white" target="_blank" href="https://github.com/ToshiKaji">Ver perfil de
+                            Github</a>
+                    </div>
+                    <div class="col text-light">
+                        <p class="text-center" style="font-weight: bold;">
+                            <br>
+                            Ashley Linares
+                        </p>
+                        <p style="text-align: justify;">
+                            Estudiante en Ingeniería en Ciencias de la Computación, le gusta mucho escuchar música y
+                            Chainsaw Man. Actualmente estudia en la Universidad Don Bosco.
+                        </p>
+                         <a class="text-white" target="_blank" href="github.com/ashmelinares">Ver perfil de
+                            Github</a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+</body>

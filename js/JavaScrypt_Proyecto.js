@@ -5,7 +5,7 @@ Se han usado algunos recursos externos para este mapa:
 */
 
 let miMapa;
-let auchapanJ, sonsonateJ, santaAnaJ, chalatetangoJ, lalibertadJ, sansalvadorJ, cuscatlanJ, lapazJ, sanvicenteJ, cabañasJ, sanmiguelJ, usulutanJ, morazanJ, launionJ;
+let ahuachapanJ, sonsonateJ, santaAnaJ, chalatetangoJ, lalibertadJ, sansalvadorJ, cuscatlanJ, lapazJ, sanvicenteJ, cabañasJ, sanmiguelJ, usulutanJ, morazanJ, launionJ;
 
 let crearMapa = () => {
     // Se establece la latitud, longitud y nivel de zoom, respectivamente. El objeto miMapa será la base de todo
@@ -25,6 +25,9 @@ let delimitarDepartamentos = () => {
 
     let ahuachapanP = delAhuachapan();
     ahuachapanP.addTo(miMapa);
+    ahuachapanP.on('mouseover', function(e){
+        this.bindPoup(JSON.parse(ahuachapanJ).html);
+    })
 
     let sonsonateP = delSonsonate();
     sonsonateP.addTo(miMapa);
@@ -37,7 +40,7 @@ let delimitarDepartamentos = () => {
 
     let sansalvadorP = delSanSalvador();
     sansalvadorP.addTo(miMapa);
-    sansalvadorP.bindPopup(JSON.parse(sansalvadorJ).html);
+    //sansalvadorP.bindPopup(JSON.parse(sansalvadorJ).html);
 
     let cuscatlanP = delCuscatlan();
     cuscatlanP.addTo(miMapa);
@@ -74,6 +77,9 @@ let infoPrevia = () => {
     // AÑADIR acá 
 }
 
+function test(d){
+    d.sourceTarget.bindPopup('Hola').openPopup;
+}
 // La información previa de cada departamento se guardará en una clase
 let departamento = function (dep, cabecera, extension, fiestas, habitantes) {
     this.nombre = dep;

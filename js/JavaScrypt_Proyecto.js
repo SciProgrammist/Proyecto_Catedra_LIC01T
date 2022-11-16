@@ -77,7 +77,7 @@ let delimitarDepartamentos = () => {
     }
     );
     lalibertadP.on('click', function () {
-        crearLink('./departamentos_html/central/La_Libertad_InfoDepart.html')
+        crearLink('./departamentos_html/centralLa_Libertad_InfoDepart.html')
     })
     lalibertadP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -238,7 +238,7 @@ let infoPrevia = () => {
     sansalvadorJ = JSON.stringify(obj1);
     let objSV = new departamento('San Vicente', 'San Vicente', '267.25', 'Del 12 al 31 de diciembre', '53,213');
     sanvicenteJ = JSON.stringify(objSV);
-<<<<<<< HEAD
+
     
     let objdptLP = new departamento('La Paz','Zacatecoluca','1,223.61','del 18 al 25 de junio','320,379');
     lapazJ=JSON.stringify(objdptLP);
@@ -250,7 +250,7 @@ let infoPrevia = () => {
     cabañasJ = JSON.stringify(objdptcbns);
     
     
-=======
+
     let objSSNT = new departamento('Sonsonate', 'Sonsonate', '232.5', 'Del 22 de enero al 2 de febrero', '72,951');
     sonsonateJ = JSON.stringify(objSSNT);
     let objSTNA = new departamento('Santa Ana', 'Santa Ana', '408', 'Del 17 al 26 de julio', '272,554');
@@ -259,7 +259,7 @@ let infoPrevia = () => {
     ahuachapanJ = JSON.stringify(objAHCP);
     let objLL = new departamento('La Libertad', 'Santa Tecla', '1652.9', 'Del 1 al 30 de diciembre', '660653');
     lalibertadJ = JSON.stringify(objLL);
->>>>>>> 6700ec17621ef2a75cbe714a74808dc3dc68df9d
+
     // AÑADIR acá 
 }
 

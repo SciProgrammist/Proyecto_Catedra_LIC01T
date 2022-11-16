@@ -28,7 +28,7 @@ let delimitarDepartamentos = () => {
     ahuachapanP = delAhuachapan();
     ahuachapanP.addTo(miMapa);
     ahuachapanP.on('mouseover', function () {
-        //crearMensaje(this, ahuachapanJ);
+        crearMensaje(this, ahuachapanJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -42,7 +42,7 @@ let delimitarDepartamentos = () => {
     sonsonateP = delSonsonate();
     sonsonateP.addTo(miMapa);
     sonsonateP.on('mouseover', function () {
-        //crearMensaje(this, sonsonateJ);
+        crearMensaje(this, sonsonateJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -56,7 +56,7 @@ let delimitarDepartamentos = () => {
     santaAnaP = delSantaAna();
     santaAnaP.addTo(miMapa);
     santaAnaP.on('mouseover', function () {
-        //crearMensaje(this, santaAnaJ);
+        crearMensaje(this, santaAnaJ);
         this.setStyle({ fillColor: "#17255e" });
 
     }
@@ -238,6 +238,12 @@ let infoPrevia = () => {
     sansalvadorJ = JSON.stringify(obj1);
     let objSV = new departamento('San Vicente', 'San Vicente', '267.25', 'Del 12 al 31 de diciembre', '53,213');
     sanvicenteJ = JSON.stringify(objSV);
+    let objSSNT = new departamento('Sonsonate', 'Sonsonate', '232.5', 'Del 22 de enero al 2 de febrero', '72,951');
+    sonsonateJ = JSON.stringify(objSSNT);
+    let objSTNA = new departamento('Santa Ana', 'Santa Ana', '408', 'Del 17 al 26 de julio', '272,554');
+    santaAnaJ = JSON.stringify(objSTNA);
+    let objAHCP = new departamento('Ahuachapán', 'Ahuachapán', '244.8', 'Del 22 de febrero al 12 de marzo', '129,750');
+    ahuachapanJ = JSON.stringify(objAHCP);
     // AÑADIR acá 
 }
 

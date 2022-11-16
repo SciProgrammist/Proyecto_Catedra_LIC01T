@@ -7,37 +7,39 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/72cbe709ce.js" crossorigin="anonymous"></script>
+    <!--Icono -->
+    <link rel="icon" href="../../img/escudo.png">
     <title>Departamento de San Miguel</title>
 </head>
 
 <body class="">
-    <header>
+    <header id="head">
         <nav>
-            <a href="#">Inicio</a>
+            <a href="../../Mapa_Index.html">Inicio</a>
             <a href="#" data-bs-toggle="dropdown" aria-expanded="false">Zona occidental</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Ahuachapán</a></li>
-                <li><a class="dropdown-item" href="#">Santa Ana</a></li>
-                <li><a class="dropdown-item" href="#">Sonsonate</a></li>
+                <li><a class="dropdown-item" href="../occidente/Ahuachapan_InfoDepart.html">Ahuachapán</a></li>
+                <li><a class="dropdown-item" href="../occidente/Santa_Ana_InfoDepart.html">Santa Ana</a></li>
+                <li><a class="dropdown-item" href="../occidente/Sonsonate_InfoDepart.html">Sonsonate</a></li>
             </ul>
 
             <a href="#" data-bs-toggle="dropdown" aria-expanded="false">Zona central</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">San Salvador</a></li>
-                <li><a class="dropdown-item" href="#">Chalatenango</a></li>
-                <li><a class="dropdown-item" href="#">Cuscatlán</a></li>
-                <li><a class="dropdown-item" href="#">La Libertad</a></li>
-                <li><a class="dropdown-item" href="#">La Paz</a></li>
-                <li><a class="dropdown-item" href="#">Cabañas</a></li>
-                <li><a class="dropdown-item" href="#">San Vicente</a></li>
+                <li><a class="dropdown-item" href="../central/San_Salvador_InfoDepart.html">San Salvador</a></li>
+                <li><a class="dropdown-item" href="../central/Chalatenango_InfoDepart.html">Chalatenango</a></li>
+                <li><a class="dropdown-item" href="../central/Cuscatlan_InfoDepart.html">Cuscatlán</a></li>
+                <li><a class="dropdown-item" href="../central/La_Libertad_InfoDepart.html">La Libertad</a></li>
+                <li><a class="dropdown-item" href="../central/La_Paz_InfoDepart.html">La Paz</a></li>
+                <li><a class="dropdown-item" href="../central/Cabañas_InfoDepart.html">Cabañas</a></li>
+                <li><a class="dropdown-item" href="../central/San_Vicente_InfoDepart.html">San Vicente</a></li>
             </ul>
 
             <a href="#" data-bs-toggle="dropdown" aria-expanded="false">Zona oriental</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">San Miguel</a></li>
-                <li><a class="dropdown-item" href="#">Morazán</a></li>
-                <li><a class="dropdown-item" href="#">Usulután</a></li>
-                <li><a class="dropdown-item" href="#">La Unión</a></li>
+                <li><a class="dropdown-item" href="../oriente/San_Miguel_InfoDepart.html">San Miguel</a></li>
+                <li><a class="dropdown-item" href="../oriente/Morazan_InfoDepart.html">Morazán</a></li>
+                <li><a class="dropdown-item" href="../oriente/Usulutan_InfoDepart.html">Usulután</a></li>
+                <li><a class="dropdown-item" href="../oriente/La_Union_InfoDepart.html">La Unión</a></li>
             </ul>
         </nav>
         <section class="textos-header">
@@ -52,6 +54,7 @@
             </svg>
         </div>
     </header>
+    <input type="hidden" id="nombreDepa" value="san_miguel">
     <div class="container">
         <div class="row">
             <h1><i class="fa-solid fa-circle-info"></i> Más sobre San Miguel...</h1>
@@ -59,7 +62,7 @@
         <div class="row mb-3">
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/San_Miguel_Departamento.png/1200px-San_Miguel_Departamento.png" class="card-img-top " alt="San Miguel" style="width: 200px; margin: auto;">
+                    <img src="https://lh4.googleusercontent.com/-e4hNZ7PFcaU/VOakZo8HV1I/AAAAAAAAHvA/BiS_OKfmqrU/s477/mapa-del-departamento-de-san-miguel.png" class="card-img-top mt-2" alt="San Miguel" style="width: 230px; margin: auto;">
                     <div class="card-body">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">San Miguel</h5>
@@ -72,7 +75,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://www.elsv.info/wp-content/uploads/2015/04/Municipios-de-San-Miguel-Imagen-con-Mapa.jpg" class="card-img-top " alt="San Miguel" style="width: 200px; margin: auto;">
+                    <img src="https://www.elsv.info/wp-content/uploads/2015/04/Municipios-de-San-Miguel-Imagen-con-Mapa.jpg" class="card-img-top mt-2" alt="San Miguel" style="width: 200px; margin: auto;">
                     <div class="card-body">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">Municipios</h5>
@@ -126,7 +129,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/San_Miguel_ES_Photomontage.jpg/800px-San_Miguel_ES_Photomontage.jpg" class="card-img-top " alt="San Miguel" style="width: 15rem; margin: auto;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/San_Miguel_ES_Photomontage.jpg/800px-San_Miguel_ES_Photomontage.jpg" class="card-img-top mt-2" alt="San Miguel" style="width: 15rem; margin: auto;">
                     <div class="card-body">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">Datos Históricos</h5>
@@ -152,7 +155,7 @@
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/R%C3%ADo_Lempa_El_Salvador.JPG/1280px-R%C3%ADo_Lempa_El_Salvador.JPG" class="card-img-top mt-1" alt="San Miguel" style="width: 300px; margin: auto;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/R%C3%ADo_Lempa_El_Salvador.JPG/1280px-R%C3%ADo_Lempa_El_Salvador.JPG" class="card-img-top  mt-2" alt="San Miguel" style="width: 300px; margin: auto;">
                     <div class="card-body ">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">Hidrografía</h5>
@@ -183,7 +186,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Monse%C3%B1or_Romero_%28colour%29.jpg" class="card-img-top mt-1" alt="San Miguel" style="width: 200px; margin: auto;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Monse%C3%B1or_Romero_%28colour%29.jpg" class="card-img-top mt-2" alt="San Miguel" style="width: 200px; margin: auto;">
                     <div class="card-body">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">Personajes</h5>
@@ -227,7 +230,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 21rem;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Vulkan_Chaparrastique%2C_El_Salvador_2013_04.JPG/413px-Vulkan_Chaparrastique%2C_El_Salvador_2013_04.JPG" class="card-img-top  mt-1" alt="San Miguel" style="width: 310px; margin: auto;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Vulkan_Chaparrastique%2C_El_Salvador_2013_04.JPG/413px-Vulkan_Chaparrastique%2C_El_Salvador_2013_04.JPG" class="card-img-top  mt-2" alt="San Miguel" style="width: 310px; margin: auto;">
                     <div class="card-body">
                         <hr class="p-0 m-0">
                         <h5 class="card-title">Otros datos interesantes...</h5>
@@ -349,6 +352,7 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/departamentos.js"></script>
 </body>
 
 </html>

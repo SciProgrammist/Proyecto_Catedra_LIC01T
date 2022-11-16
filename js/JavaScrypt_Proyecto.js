@@ -33,7 +33,7 @@ let delimitarDepartamentos = () => {
     }
     );
     ahuachapanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/occidente/Ahuachapan_InfoDepart.html')
     })
     ahuachapanP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -47,7 +47,7 @@ let delimitarDepartamentos = () => {
     }
     );
     sonsonateP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/occidente/Sonsonate_InfoDepart.html')
     })
     sonsonateP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -62,7 +62,7 @@ let delimitarDepartamentos = () => {
     }
     );
     santaAnaP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/occidente/Santa_Ana_InfoDepart.html')
     })
     santaAnaP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -161,7 +161,7 @@ let delimitarDepartamentos = () => {
     sanvicenteP = delSanVicente();
     sanvicenteP.addTo(miMapa);
     sanvicenteP.on('mouseover', function () {
-        //crearMensaje(this, sanvicenteJ);
+        crearMensaje(this, sanvicenteJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -234,9 +234,10 @@ let delimitarDepartamentos = () => {
 
 // Se establecen todos los JSON con la información previa
 let infoPrevia = () => {
-    let obj1 = new departamento('San Salvador', 'San Salvador', 'Solo_Numero', 'El 6 y 7 de agosto', 'Solo_Numero');
+    let obj1 = new departamento('San Salvador', 'San Salvador', '651.31', 'Del 1 al 6 de agosto', '2,404,097');
     sansalvadorJ = JSON.stringify(obj1);
-
+    let objSV = new departamento('San Vicente', 'San Vicente', '267.25', 'Del 12 al 31 de diciembre', '53,213');
+    sanvicenteJ = JSON.stringify(objSV);
     // AÑADIR acá 
 }
 

@@ -10,15 +10,16 @@ let ahuachapanP, sonsonateP, santaAnaP, chalatenangoP, lalibertadP, sansalvadorP
 let crearMapa = () => {
     // Se establece la latitud, longitud y nivel de zoom, respectivamente. El objeto miMapa será la base de todo
     miMapa = L.map('div_mapa').setView([13.7994, -88.8272], 9);
-    miMapa._layersmaxZoom = 10;
 
     // Se agrega el mapa usando OpenStreetMap como proveedor.
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        minZoom: 9,
+        maxZoom: 10,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(miMapa);
 
     delimitarDepartamentos(); // Se delimitan los departamentos.
+    ayudaVisualZonas();
 }
 
 let delimitarDepartamentos = () => {
@@ -67,7 +68,7 @@ let delimitarDepartamentos = () => {
         this.setStyle({ fillColor: "#3388ff" });
     })
 
-    let lalibertadP = delLaLibertad();
+    lalibertadP = delLaLibertad();
     lalibertadP.addTo(miMapa);
     lalibertadP.on('mouseover', function () {
         //crearMensaje(this, lalibertadJ);
@@ -76,7 +77,7 @@ let delimitarDepartamentos = () => {
     }
     );
     lalibertadP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/La_Libertad_InfoDepart.html')
     })
     lalibertadP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -90,7 +91,7 @@ let delimitarDepartamentos = () => {
     }
     );
     sansalvadorP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/San_Salvador_InfoDepart.html')
     })
     sansalvadorP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -105,7 +106,7 @@ let delimitarDepartamentos = () => {
     }
     );
     cuscatlanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/Cuscatlan_InfoDepart.html')
     })
     cuscatlanP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -120,7 +121,7 @@ let delimitarDepartamentos = () => {
     }
     );
     cabañasP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/Cabañas_InfoDepart.html')
     })
     cabañasP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -135,7 +136,7 @@ let delimitarDepartamentos = () => {
     }
     );
     chalatenangoP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/Chalatenango_InfoDepart.html')
     })
     chalatenangoP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -150,7 +151,7 @@ let delimitarDepartamentos = () => {
     }
     );
     lapazP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/La_Paz_InfoDepart.html')
     })
     lapazP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -165,7 +166,7 @@ let delimitarDepartamentos = () => {
     }
     );
     sanvicenteP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/San_Vicente_InfoDepart.html')
     })
     sanvicenteP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -180,7 +181,7 @@ let delimitarDepartamentos = () => {
     }
     );
     usulutanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/Usulutan_InfoDepart.html')
     })
     usulutanP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -194,7 +195,7 @@ let delimitarDepartamentos = () => {
     }
     );
     sanmiguelP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/San_Miguel_InfoDepart.html')
     })
     sanmiguelP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -209,7 +210,7 @@ let delimitarDepartamentos = () => {
     }
     );
     morazanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/Morazan_infoDepart.html')
     })
     morazanP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -223,7 +224,7 @@ let delimitarDepartamentos = () => {
     }
     );
     launionP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/La_Union_InfoDepart.html')
     })
     launionP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -253,6 +254,61 @@ let crearLink = (enlace) => {
     window.location = enlace;
 }
 
+let ayudaVisualZonas = () => {
+    let occidente = document.getElementById("zOccidente");
+    // Cuando el mouse está en la zona
+    occidente.addEventListener("mouseover", function(){
+        sombraOccidente("red");
+    })
+    // Cuando el mouse sale de la zona
+    occidente.addEventListener("mouseleave", function(){
+        sombraOccidente("#3388ff")
+    });
+
+    let central = document.getElementById("zCentral");
+    central.addEventListener("mouseover", function(){
+        sombraCentral("green");
+    })
+    central.addEventListener("mouseleave", function(){
+        sombraCentral("#3388ff");
+    })
+
+    let oriente = document.getElementById("zOriente");
+    oriente.addEventListener("mouseover", function(){
+        sombraOriente("orange");
+    })
+    oriente.addEventListener("mouseleave", function(){
+        sombraOriente("#3388ff");
+    })
+
+}
+// Función que destaca occidente
+let sombraOccidente = (colorD) =>{
+    sonsonateP.setStyle({fillColor: `${colorD}`});
+    ahuachapanP.setStyle({fillColor: `${colorD}`})
+    santaAnaP.setStyle({fillColor: `${colorD}`});
+}
+
+// Función que destaca la zona central
+let sombraCentral = (colorD) =>{
+    sansalvadorP.setStyle({fillColor: `${colorD}`});
+    chalatenangoP.setStyle({fillColor: `${colorD}`});
+    cuscatlanP.setStyle({fillColor: `${colorD}`});
+    lapazP.setStyle({fillColor: `${colorD}`});
+    cabañasP.setStyle({fillColor: `${colorD}`});
+    sanvicenteP.setStyle({fillColor: `${colorD}`});
+    lalibertadP.setStyle({fillColor: `${colorD}`});
+
+}
+
+// Función que destaca la zona oriental
+let sombraOriente = (colorD) =>{
+    usulutanP.setStyle({fillColor: `${colorD}`});
+    sanmiguelP.setStyle({fillColor: `${colorD}`});
+    morazanP.setStyle({fillColor: `${colorD}`});
+    launionP.setStyle({fillColor: `${colorD}`});
+}
+
 // La información previa de cada departamento se guardará en una clase
 let departamento = function (dep, cabecera, extension, fiestas, habitantes) {
     this.nombre = dep;
@@ -272,6 +328,7 @@ let departamento = function (dep, cabecera, extension, fiestas, habitantes) {
 }
 
 // Delimita las coordenadas del departamento
+
 let delAhuachapan = () => {
 
     // Se traza un poligono, uniendo las coordenadas.

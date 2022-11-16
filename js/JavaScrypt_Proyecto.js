@@ -116,7 +116,7 @@ let delimitarDepartamentos = () => {
     cabañasP = delCabañas();
     cabañasP.addTo(miMapa);
     cabañasP.on('mouseover', function () {
-        //crearMensaje(this, cabañasJ);
+        crearMensaje(this, cabañasJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -131,7 +131,7 @@ let delimitarDepartamentos = () => {
     chalatenangoP = delChalatenango();
     chalatenangoP.addTo(miMapa);
     chalatenangoP.on('mouseover', function () {
-        //crearMensaje(this, chalatetangoJ);
+        crearMensaje(this, chalatetangoJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -146,7 +146,7 @@ let delimitarDepartamentos = () => {
     lapazP = delLaPaz();
     lapazP.addTo(miMapa);
     lapazP.on('mouseover', function () {
-        //crearMensaje(this, lapazJ);
+        crearMensaje(this, lapazJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -205,7 +205,7 @@ let delimitarDepartamentos = () => {
     morazanP = delMorazan();
     morazanP.addTo(miMapa);
     morazanP.on('mouseover', function () {
-        //crearMensaje(this, morazanJ);
+        crearMensaje(this, morazanJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -238,6 +238,19 @@ let infoPrevia = () => {
     sansalvadorJ = JSON.stringify(obj1);
     let objSV = new departamento('San Vicente', 'San Vicente', '267.25', 'Del 12 al 31 de diciembre', '53,213');
     sanvicenteJ = JSON.stringify(objSV);
+<<<<<<< HEAD
+    
+    let objdptLP = new departamento('La Paz','Zacatecoluca','1,223.61','del 18 al 25 de junio','320,379');
+    lapazJ=JSON.stringify(objdptLP);
+    let objdptMrzn = new departamento('Morazan','San Francisco Gotera','1,447','del 1 al 4 de octubre','174,406');
+    morazanJ=JSON.stringify(objdptMrzn);
+    let objdptchlt = new departamento('Chalatenango','Chalatenango','2017','del 15 al 24 de junio','275,100');
+    chalatetangoJ=JSON.stringify(objdptchlt);
+    let objdptcbns =new departamento('Cabañas','Sensuntepeque','1,103.51','Del 25 de noviembre al 5 de diciembre','215,400');
+    cabañasJ = JSON.stringify(objdptcbns);
+    
+    
+=======
     let objSSNT = new departamento('Sonsonate', 'Sonsonate', '232.5', 'Del 22 de enero al 2 de febrero', '72,951');
     sonsonateJ = JSON.stringify(objSSNT);
     let objSTNA = new departamento('Santa Ana', 'Santa Ana', '408', 'Del 17 al 26 de julio', '272,554');
@@ -246,13 +259,7 @@ let infoPrevia = () => {
     ahuachapanJ = JSON.stringify(objAHCP);
     let objLL = new departamento('La Libertad', 'Santa Tecla', '1652.9', 'Del 1 al 30 de diciembre', '660653');
     lalibertadJ = JSON.stringify(objLL);
-
-    let objLU = new departamento('La Union', 'La Union', '144.4', 'Del 17 al 26 de julio', '34,045');
-    launionJ = JSON.stringify(objLU);
-    let objSM = new departamento('San Miguel', 'San Miguel', '594', 'Del 22 de febrero al 12 de marzo', '247,119');
-    sanmiguelJ = JSON.stringify(objSM);
-    let objU = new departamento('Usulután', 'Usulután', '1652.9', 'Del 1 al 30 de diciembre', '660653');
-    usulutanJ = JSON.stringify(objU);
+>>>>>>> 6700ec17621ef2a75cbe714a74808dc3dc68df9d
     // AÑADIR acá 
 }
 

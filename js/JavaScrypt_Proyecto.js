@@ -101,7 +101,7 @@ let delimitarDepartamentos = () => {
     cuscatlanP = delCuscatlan();
     cuscatlanP.addTo(miMapa);
     cuscatlanP.on('mouseover', function () {
-        //crearMensaje(this, cuscatlanJ);
+        crearMensaje(this, cuscatlanJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -248,7 +248,8 @@ let infoPrevia = () => {
     chalatetangoJ=JSON.stringify(objdptchlt);
     let objdptcbns =new departamento('Cabañas','Sensuntepeque','1,103.51','Del 25 de noviembre al 5 de diciembre','215,400');
     cabañasJ = JSON.stringify(objdptcbns);
-    
+    let objCSCT = new departamento('Cuscatlán', 'Cuscatlán', '756', 'Del 26 al 28 de Diciembre', '232,238');
+    cuscatlanJ = JSON.stringify(objCSCT);
     
 
     let objSSNT = new departamento('Sonsonate', 'Sonsonate', '232.5', 'Del 22 de enero al 2 de febrero', '72,951');

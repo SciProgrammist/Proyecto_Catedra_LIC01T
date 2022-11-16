@@ -176,7 +176,7 @@ let delimitarDepartamentos = () => {
     usulutanP = delUsulutan();
     usulutanP.addTo(miMapa);
     usulutanP.on('mouseover', function () {
-        //crearMensaje(this, usulutanJ);
+        crearMensaje(this, usulutanJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -190,7 +190,7 @@ let delimitarDepartamentos = () => {
     sanmiguelP = delSanMiguel();
     sanmiguelP.addTo(miMapa);
     sanmiguelP.on('mouseover', function () {
-        //crearMensaje(this, sanmiguelJ);
+        crearMensaje(this, sanmiguelJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -219,7 +219,7 @@ let delimitarDepartamentos = () => {
     launionP = delLaUnion();
     launionP.addTo(miMapa);
     launionP.on('mouseover', function () {
-        //crearMensaje(this, launionJ);
+        crearMensaje(this, launionJ);
         this.setStyle({ fillColor: "#17255e" });
     }
     );
@@ -260,6 +260,12 @@ let infoPrevia = () => {
     let objLL = new departamento('La Libertad', 'Santa Tecla', '1652.9', 'Del 1 al 30 de diciembre', '660653');
     lalibertadJ = JSON.stringify(objLL);
 
+    let objLU= new departamento('La Unión', 'La Unión', '144.4', 'Del 1 al 15 de octubre', '34,045');
+    launionJ = JSON.stringify(objLU);
+    let objSM = new departamento('San Miguel', 'San Miguel', '594', 'Del 29 de octubre al 26 de noviembre', '247,119');
+    sanmiguelJ = JSON.stringify(objSM);
+    let objU = new departamento('Usulután', 'Usulután', '139.8', 'Del 19 al 27 de noviembre', '73,064');
+    usulutanJ = JSON.stringify(objU);
     // AÑADIR acá 
 }
 

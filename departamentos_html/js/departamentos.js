@@ -17,8 +17,8 @@ function cambiarImgDepa(){
 			srcImg += "usulutan.jpg";
 			break;
 		}
-		case "san_salavador":{
-			srcImg += "san_salavador.jpg";
+		case "san_salvador":{
+			srcImg += "san_salvador.jpg";
 			break;
 		}
 		case "santa_ana":{

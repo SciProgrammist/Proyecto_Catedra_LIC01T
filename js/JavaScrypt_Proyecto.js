@@ -246,6 +246,13 @@ let infoPrevia = () => {
     ahuachapanJ = JSON.stringify(objAHCP);
     let objLL = new departamento('La Libertad', 'Santa Tecla', '1652.9', 'Del 1 al 30 de diciembre', '660653');
     lalibertadJ = JSON.stringify(objLL);
+
+    let objLU = new departamento('La Union', 'La Union', '144.4', 'Del 17 al 26 de julio', '34,045');
+    launionJ = JSON.stringify(objLU);
+    let objSM = new departamento('San Miguel', 'San Miguel', '594', 'Del 22 de febrero al 12 de marzo', '247,119');
+    sanmiguelJ = JSON.stringify(objSM);
+    let objU = new departamento('Usulután', 'Usulután', '1652.9', 'Del 1 al 30 de diciembre', '660653');
+    usulutanJ = JSON.stringify(objU);
     // AÑADIR acá 
 }
 

@@ -71,7 +71,7 @@ let delimitarDepartamentos = () => {
     lalibertadP = delLaLibertad();
     lalibertadP.addTo(miMapa);
     lalibertadP.on('mouseover', function () {
-        //crearMensaje(this, lalibertadJ);
+        crearMensaje(this, lalibertadJ);
         this.setStyle({ fillColor: "#17255e" });
 
     }
@@ -244,6 +244,8 @@ let infoPrevia = () => {
     santaAnaJ = JSON.stringify(objSTNA);
     let objAHCP = new departamento('Ahuachapán', 'Ahuachapán', '244.8', 'Del 22 de febrero al 12 de marzo', '129,750');
     ahuachapanJ = JSON.stringify(objAHCP);
+    let objLL = new departamento('La Libertad', 'Santa Tecla', '1652.9', 'Del 1 al 30 de diciembre', '660653');
+    lalibertadJ = JSON.stringify(objLL);
     // AÑADIR acá 
 }
 

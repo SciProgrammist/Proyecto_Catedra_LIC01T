@@ -121,7 +121,7 @@ let delimitarDepartamentos = () => {
     }
     );
     cabañasP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/Cabañas_InfoDepart.html')
     })
     cabañasP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -136,7 +136,7 @@ let delimitarDepartamentos = () => {
     }
     );
     chalatenangoP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/central/Chalatenango_InfoDepart.html')
     })
     chalatenangoP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -181,7 +181,7 @@ let delimitarDepartamentos = () => {
     }
     );
     usulutanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/Usulutan_InfoDepart.html')
     })
     usulutanP.on('mouseout', function () {
         this.setStyle({ fillColor: "#3388ff" });
@@ -195,7 +195,7 @@ let delimitarDepartamentos = () => {
     }
     );
     sanmiguelP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/San_Miguel_InfoDepart.html')
     })
     sanmiguelP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -210,7 +210,7 @@ let delimitarDepartamentos = () => {
     }
     );
     morazanP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/Morazan_infoDepart.html')
     })
     morazanP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -224,7 +224,7 @@ let delimitarDepartamentos = () => {
     }
     );
     launionP.on('click', function () {
-        crearLink('./departamentos_html/oriente/san_miguel.html')
+        crearLink('./departamentos_html/oriente/La_Union_InfoDepart.html')
     })
     launionP.on('mouseout', function() {
         this.setStyle({fillColor: "#3388ff"});
@@ -328,6 +328,7 @@ let departamento = function (dep, cabecera, extension, fiestas, habitantes) {
 }
 
 // Delimita las coordenadas del departamento
+
 let delAhuachapan = () => {
 
     // Se traza un poligono, uniendo las coordenadas.
